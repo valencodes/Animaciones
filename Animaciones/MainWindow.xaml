@@ -12,7 +12,7 @@
         </Grid.ColumnDefinitions>
         <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Práctica para Estudiar las Animaciones en WPF con XAML" VerticalAlignment="Top" Height="41" Width="500" FontWeight="Bold" FontSize="18"/>
         <Button x:Name="btTiposAnimaciones" Content="Diferentes Tipos de Animaciones" HorizontalAlignment="Center" Margin="0,71,0,0" VerticalAlignment="Top" FontSize="16" Click="btTiposAnimaciones_Click"/>
-        <Button x:Name="btControlTextBox" Content="Animación Control TextBox" HorizontalAlignment="Center" Margin="0,114,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="btControlTextBox" Content="Animación Control TextBox" HorizontalAlignment="Center" Margin="0,114,0,0" VerticalAlignment="Top" FontSize="16" Click="btControlTextBox_Click"/>
         <Button x:Name="btFigurasElipses" Content="Animación con Frames de Figuras Elipses" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,158,0,0" />
         <Button x:Name="btAcercade" Content="Acerca de" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,250,0,0" Click="btAcercade_Click"/>
         <Button x:Name="btSalir" Content="Salir" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,290,0,0" Click="btSalir_Click"/>

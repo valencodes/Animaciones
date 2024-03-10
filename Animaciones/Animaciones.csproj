@@ -58,9 +58,16 @@
     <Compile Include="vtAcercade.xaml.cs">
       <DependentUpon>vtAcercade.xaml</DependentUpon>
     </Compile>
+    <Compile Include="winAnimacionControl.xaml.cs">
+      <DependentUpon>winAnimacionControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="winAnimaVarios.xaml.cs">
       <DependentUpon>winAnimaVarios.xaml</DependentUpon>
     </Compile>
+    <Page Include="Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dictionary2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -78,6 +85,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="vtAcercade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winAnimacionControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

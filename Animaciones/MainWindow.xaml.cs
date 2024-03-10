@@ -41,5 +41,11 @@ namespace Animaciones
             Window animavarios = new winAnimaVarios();
             animavarios.ShowDialog();
         }
+
+        private void btControlTextBox_Click(object sender, RoutedEventArgs e)
+        {
+            Window animacioncontrol = new winAnimacionControl();
+            animacioncontrol.ShowDialog();
+        }
     }
 }

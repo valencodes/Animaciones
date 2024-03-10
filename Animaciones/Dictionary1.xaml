@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="TextBox">
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="TextBox.GotFocus">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetProperty="Width"
+ From="270" To="310" Duration="0:0:1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Height"
+ From="23" To="30" Duration="0:0:1"/>
+                        <DoubleAnimation Storyboard.TargetProperty="FontSize"
+ From="14" To="19" Duration="0:0:1"/>
+                        <ColorAnimation
+Storyboard.TargetProperty="(TextBox.Background).(SolidColorBrush.Color)" 
+ From="White" To="SkyBlue" Duration="0:0:1"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="TextBox.LostFocus">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetProperty="Width" From="310" To="270" Duration="0:0:1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Height" From="30" To="23" Duration="0:0:1"/>
+                        <DoubleAnimation Storyboard.TargetProperty="FontSize" From="19" To="14" Duration="0:0:1"/>
+                        <ColorAnimation Storyboard.TargetProperty="(TextBox.Background).(SolidColorBrush.Color)" From="SkyBlue" To="White" Duration="0:0:1"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
