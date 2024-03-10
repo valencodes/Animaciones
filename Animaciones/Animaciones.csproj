@@ -61,6 +61,9 @@
     <Compile Include="winAnimacionControl.xaml.cs">
       <DependentUpon>winAnimacionControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="winAnimaFrameElipses.xaml.cs">
+      <DependentUpon>winAnimaFrameElipses.xaml</DependentUpon>
+    </Compile>
     <Compile Include="winAnimaVarios.xaml.cs">
       <DependentUpon>winAnimaVarios.xaml</DependentUpon>
     </Compile>
@@ -89,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="winAnimacionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winAnimaFrameElipses.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

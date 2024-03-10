@@ -47,5 +47,11 @@ namespace Animaciones
             Window animacioncontrol = new winAnimacionControl();
             animacioncontrol.ShowDialog();
         }
+
+        private void btFigurasElipses_Click(object sender, RoutedEventArgs e)
+        {
+            Window elipses = new winAnimaFrameElipses();
+            elipses.ShowDialog();
+        }
     }
 }
