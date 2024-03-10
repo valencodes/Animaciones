@@ -10,30 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Animaciones
+namespace MultiVentana
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para vtAcercade.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class vtAcercade : Window
     {
-        public MainWindow()
+        public vtAcercade()
         {
             InitializeComponent();
         }
-        private void btSalir_Click(object sender, RoutedEventArgs e)
+
+        private void btAceptar_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
-
-        private void btAcercade_Click(object sender, RoutedEventArgs e)
-        {
-            Window acercade = new vtAcercade();
-            acercade.ShowDialog();
-        }
-
     }
 }

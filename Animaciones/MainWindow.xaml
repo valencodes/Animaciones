@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Animaciones"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Ventana Principal de Animaciones" Height="375" Width="586">
+    <Grid Background="BlanchedAlmond">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Práctica para Estudiar las Animaciones en WPF con XAML" VerticalAlignment="Top" Height="41" Width="500" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="btTiposAnimaciones" Content="Diferentes Tipos de Animaciones" HorizontalAlignment="Center" Margin="0,71,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="btControlTextBox" Content="Animación Control TextBox" HorizontalAlignment="Center" Margin="0,114,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="btFigurasElipses" Content="Animación con Frames de Figuras Elipses" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,158,0,0" />
+        <Button x:Name="btAcercade" Content="Acerca de" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,250,0,0" Click="btAcercade_Click"/>
+        <Button x:Name="btSalir" Content="Salir" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,290,0,0" Click="btSalir_Click"/>
+        <Button x:Name="btFramesSpline" Content="Animación con Frames y Spline" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,204,0,0" />
     </Grid>
 </Window>
