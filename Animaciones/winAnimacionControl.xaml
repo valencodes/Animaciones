@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Animaciones"
         mc:Ignorable="d"
-        Title="winAnimacionControl" Height="290" Width="353">
+        Title="Ventana Animación TetBox: winAnimacionControl" Height="290" Width="353">
     <Window.Resources>
         <ResourceDictionary>
             <!-- añadimos los estilos del fichero de diccionario de recursos -->
