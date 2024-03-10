@@ -16,6 +16,6 @@
         <Button x:Name="btFigurasElipses" Content="Animación con Frames de Figuras Elipses" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,158,0,0" Click="btFigurasElipses_Click" />
         <Button x:Name="btAcercade" Content="Acerca de" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,250,0,0" Click="btAcercade_Click"/>
         <Button x:Name="btSalir" Content="Salir" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,290,0,0" Click="btSalir_Click"/>
-        <Button x:Name="btFramesSpline" Content="Animación con Frames y Spline" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,204,0,0" />
+        <Button x:Name="btFramesSpline" Content="Animación con Frames y Spline" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,204,0,0" Click="btFramesSpline_Click" />
     </Grid>
 </Window>

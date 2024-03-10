@@ -64,6 +64,9 @@
     <Compile Include="winAnimaFrameElipses.xaml.cs">
       <DependentUpon>winAnimaFrameElipses.xaml</DependentUpon>
     </Compile>
+    <Compile Include="winAnimaFrameSpline.xaml.cs">
+      <DependentUpon>winAnimaFrameSpline.xaml</DependentUpon>
+    </Compile>
     <Compile Include="winAnimaVarios.xaml.cs">
       <DependentUpon>winAnimaVarios.xaml</DependentUpon>
     </Compile>
@@ -96,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="winAnimaFrameElipses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winAnimaFrameSpline.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,6 +143,35 @@
   <ItemGroup>
     <Resource Include="panic_r.jpg" />
     <Resource Include="paninc_r_p.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imgCont\Ayahuasca.jpg" />
+    <Resource Include="imgCont\psyBG.png" />
+    <Resource Include="imgCont\psychedelic.jpg" />
+    <Resource Include="imgCont\psychedelic.png" />
+    <Resource Include="imgCont\psyche_tunnel.png" />
+    <Resource Include="imgCont\waterdrop.png" />
+    <Resource Include="imgIconos\AyahuascaIcono.jpg" />
+    <Resource Include="imgIconos\psyBGIcono.png" />
+    <Resource Include="imgIconos\psychedelicIcono.jpg" />
+    <Resource Include="imgIconos\psychedelicIcono.png" />
+    <Resource Include="imgIconos\psyche_tunnelIcono.png" />
+    <Resource Include="imgIconos\waterdropIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="waterdropIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="psychedelicIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="psychedelicIcono.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="psyche_tunnelIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="psyBGIcono.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -53,5 +53,11 @@ namespace Animaciones
             Window elipses = new winAnimaFrameElipses();
             elipses.ShowDialog();
         }
+
+        private void btFramesSpline_Click(object sender, RoutedEventArgs e)
+        {
+            Window spline = new winAnimaFrameSpline();
+            spline.ShowDialog();
+        }
     }
 }
