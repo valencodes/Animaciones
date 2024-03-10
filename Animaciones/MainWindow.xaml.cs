@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MultiVentana;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,5 +36,10 @@ namespace Animaciones
             acercade.ShowDialog();
         }
 
+        private void btTiposAnimaciones_Click(object sender, RoutedEventArgs e)
+        {
+            Window animavarios = new winAnimaVarios();
+            animavarios.ShowDialog();
+        }
     }
 }

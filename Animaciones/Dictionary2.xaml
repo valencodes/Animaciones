@@ -1,0 +1,182 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Estilo Inicial Botón -->
+    <Style TargetType="{x:Type Button}" x:Key="btInicio">
+        <Setter Property="Margin" Value="10,20,10,0"/>
+        <Setter Property="Height" Value="34"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Background" Value="Blue"/>
+        <Setter Property="Foreground" Value="AliceBlue"/>
+    </Style>    <!-- Estilo Botón Verde -->
+    <Style TargetType="{x:Type Button}" x:Key="btGreen">
+        <Setter Property="Margin" Value="10,20,10,0"/>
+        <Setter Property="Height" Value="34"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Background" Value="Green"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <!-- Estilo Botón Amarillo -->
+    <Style TargetType="{x:Type Button}" x:Key="btYellow">
+        <Setter Property="Margin" Value="10,20,10,0"/>
+        <Setter Property="Height" Value="34"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Background" Value="Yellow"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+
+    <!-- Estilo Botón Rojo -->
+    <Style TargetType="{x:Type Button}" x:Key="btRed">
+        <Setter Property="Margin" Value="10,20,10,0"/>
+        <Setter Property="Height" Value="34"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!-- Estilo Etiqueta 1 -->
+    <Style TargetType="{x:Type Label}" x:Key="lbGreen">
+        <Setter Property="Background" Value="Green"/>
+        <Setter Property="Foreground" Value="YellowGreen"/>
+    </Style>    <!-- Estilo Etiqueta Amarilla -->
+    <Style TargetType="{x:Type Label}" x:Key="lbYellow">
+        <Setter Property="Background" Value="Yellow"/>
+        <Setter Property="Foreground" Value="DarkOrange"/>
+    </Style>
+
+    <!-- Estilo Etiqueta Roja -->
+    <Style TargetType="{x:Type Label}" x:Key="lbRed">
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Foreground" Value="WhiteSmoke"/>
+    </Style>
+    <!-- Estilo para el GroupBox. Como se define el estilo en el diccionario 
+sin key se aplica a todos los GroupBox sin necesidad de indicar Style={…} 
+en el XAML -->
+    <Style TargetType="{x:Type GroupBox}">
+        <Setter Property="Foreground" Value="Gray"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="Background" Value="White"/>
+    </Style>    <!-- Estilo para CheckBox No tiene key y se aplica el estilo a todos -->
+    <Style TargetType="{x:Type CheckBox}">
+        <Setter Property="BorderBrush" Value="IndianRed"/>
+        <Setter Property="FontFamily" Value="Verdana"/>
+        <Setter Property="Background" Value="Lavender"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Foreground" Value="IndianRed"/>
+    </Style>
+    <!-- Estilo de boton animado 1 -->
+    <Style TargetType="Button" x:Key="b_animado1">
+        <Style.Triggers>
+            <!-- Animo el boton, por medio del trigger de EVENTO Loaded al inicio-->
+            <EventTrigger RoutedEvent="Button.Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <!-- Animación sobre la opacidad/ transparencia del boton -->
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.2" To="1" Duration="0:0:5" 
+ AutoReverse="True" RepeatBehavior="Forever" />
+
+                        <!-- Animación sobre el tamaño de la fuente del boton -->
+                        <DoubleAnimation Storyboard.TargetProperty="FontSize"
+ From="6.0" To="12.0" Duration="0:0:5" 
+ AutoReverse="True" RepeatBehavior="Forever" />
+
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <!-- Animaciones sobre el evento click del boton -->
+            <EventTrigger RoutedEvent="Button.Click">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <!-- Animación sobre el color de fondo del boton -->
+                        <ColorAnimation 
+ Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" 
+ From="Yellow" To="YellowGreen" Duration="0:0:10" AutoReverse="True"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <!--Se pueden poner otros triggers, por ejemplo de PROPIEDAD 
+            Cambio color fuente al pasar ratón sobre el control. No confundir con evento. En 
+este caso no hay animación solo un cambio de color -->
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="Red"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!-- Estilo de boton animado 2 (con transicion de imágenes) -->
+    <Style TargetType="Button" x:Key="b_animado2">
+        <Setter Property="Template">
+            <!-- El contenido/valor de tipo ControlTemplate de la propiedad Template. es 
+un elemento visual que define la apariencia que tendrá el control al que se 
+le aplica la plantilla. Lo hacemos sin animación, personalizando estilo-->
+            <Setter.Value>
+                <!-- Indico otra vez al element al que se aplica y del que hereda -->
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <!-- Definimos la apariencia gráfica del control. Para esto usaremos el elemento border que Define un nuevo Borde exterior del control -->
+                    <Border Name="b1" Background="Gold" Height="105" Width="180" BorderThickness="2" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" >
+                        <!--establece el radio del redondeo de las esquinas del borde -->
+                        <!-- Los campos con valor {TemplateBinding} permiten al usuario cambiarlo dentro del xaml de la pantalla. Las propiedades que no e definan así no serán modificables por el usuario -->
+                        <Image Name="img1" Stretch="Fill" Margin="5" OpacityMask="Green" Source="panic_r.jpg" />
+                        <!-- Insertamos la imagen dentro del borde -->
+                    </Border>
+                    <!-- Defino un Trigger para el funcionamiento de la plantilla -->
+                    <ControlTemplate.Triggers>
+                        <!-- Trigger para la animacion de pulsación de boton -->
+                        <EventTrigger RoutedEvent="Button.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="img1" Storyboard.TargetProperty="Source" Duration="0:0:2">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <BitmapImage UriSource="paninc_r_p.jpg"/>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:2">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <BitmapImage UriSource="panic_r.jpg"/>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <!-- Trigger común de propiedad -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="b1" Property="Background" Value="Green"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Estilo para la ventana con modificación del color de fondo -->
+    <Style TargetType="Window" x:Key="s_window">
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Window.Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Storyboard.TargetProperty="(Window.Background).(SolidColorBrush.Color)" From="SkyBlue" To="DarkBlue" Duration="0:0:2" AutoReverse="True" RepeatBehavior="Forever"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!-- Estilo para el gridMovimiento con modificación del color de fondo -->
+    <Style TargetType="Grid" x:Key="s_grid">
+        <Setter Property="Background" Value="Red"/>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Grid.Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation
+Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" 
+ From="Yellow" To="Violet" Duration="0:0:2"
+ AutoReverse="True" RepeatBehavior="Forever"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
